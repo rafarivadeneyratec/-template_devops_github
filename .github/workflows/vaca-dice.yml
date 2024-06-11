@@ -1,24 +1,24 @@
-name: Example Workflow
+name: Ejercicio workflow
 
-# Define el evento workflow_dispatch para ejecutar el flujo de trabajo manualmente.
+
 on: 
   workflow_dispatch:
 
 jobs:
   job1:
-    runs-on: ubuntu-latest  # Define el entorno en el que se ejecutarán los trabajos (ubuntu-latest en este caso).
+    runs-on: ubuntu-latest 
     steps:
       - name: Step 1
-        run: echo step1  # Primer paso: Ejecuta el comando echo para mostrar 'step1'.
+        run: echo step1  
       
       - name: Step 2
-        run: echo step2  # Segundo paso: Ejecuta el comando echo para mostrar 'step2'.
+        run: echo step2  
 
   job2:
-    needs: job1  # Define que job2 depende de job1.
-    runs-on: ubuntu-latest  # Define el entorno en el que se ejecutará job2 (ubuntu-latest en este caso).
+    needs: job1
+    runs-on: ubuntu-latest  
     steps:
       - name: Cowsay Action
-        uses: mscoutermarsh/cowsays-action@master  # Especifica la acción de Cowsay desde el Marketplace de GitHub.
+        uses: mscoutermarsh/cowsays-action@master  
         with:
-          message: "Hello from GitHub Actions!"  # Mensaje que se mostrará en arte ASCII de vaca.
+          message: "Hola desde GitHub Actions!"  
