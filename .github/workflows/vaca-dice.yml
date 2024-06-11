@@ -21,4 +21,4 @@ jobs:
       - name: Cowsay Action
         uses: mscoutermarsh/cowsays-action@master  
         with:
-          message: "Hola ${{VACA-DICE}} desde GitHub Actions!"  
+          message: "Hola ${{secrets.VACA-DICE}} desde GitHub Actions!"  
