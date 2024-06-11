@@ -1,1 +1,14 @@
-#soy un demo de un archivo yml
+name: Variable usada
+
+
+on:
+ workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Step 1
+        run: echo {{ VACA_DICE }}  
+      
+
