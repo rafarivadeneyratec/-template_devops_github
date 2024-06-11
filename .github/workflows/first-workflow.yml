@@ -12,3 +12,13 @@ jobs:
       
       - name: Step 2
         run: echo step2
+
+  job2:
+    runs-on: ubuntu-latest  # Define el entorno en el que se ejecutará job2 (ubuntu-latest en este caso).
+    steps:
+      - name: Cowsay Action
+        uses: peter-evans/cowsay@v1  # Especifica la acción de Cowsay desde el Marketplace de GitHub.
+        with:
+          message: "Hola desde GitHub Actions!"  # Mensaje que se mostrará en arte ASCII de vaca.
+
+        
